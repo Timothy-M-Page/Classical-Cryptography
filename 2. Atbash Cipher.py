@@ -7,3 +7,4 @@ def Atbash(p):
         c = c + A[25 - A.index(l)]
     return(c)
 
+# Note that the Atbash cipher is its own inverse.
