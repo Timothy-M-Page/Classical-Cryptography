@@ -9,7 +9,7 @@ def inv(a):                             # Inverse element in the group Z/26Z
     print(f"{a} has no inverse mod 26")  # Error message if gcd(a,26) > 1.
     return None
 
-def affine(a,b,p):
+def affine_encrypt(a,b,p):
     c = ""
     for i in p:
         if i in A:
