@@ -11,3 +11,4 @@ def Atbash(p):
     return c
 
 # Note that the Atbash cipher is its own inverse.
+# Hence there is no need for a seperate encryption and decryption function. 
