@@ -1,7 +1,7 @@
 
 A = "abcdefghijklmnopqrstuvwxyz"
 
-def caesar(p,k):
+def caesar_encrypt(p,k):
     c = ""
     for l in p:
         if l in A:
