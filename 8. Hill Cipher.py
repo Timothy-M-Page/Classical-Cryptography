@@ -6,7 +6,7 @@ A = "abcdefghijklmnopqrstuvwxyz "
 def hill_encrypt(p,M):
     D = len(M)
     for i in range(D - (len(p) % D)):
-        p += A[random.randint(0, 26)]      # Ensure the plaintext is a multiple of the dimension of the matrix
+        p += A[random.randint(0, 26)]      # Add random padding to ensure the plaintext is a multiple of the dimension of the matrix
     L = len(p)
     c = ""
     for i in range(L // D):                      # i ranges over blocks of the plaintext of length D
