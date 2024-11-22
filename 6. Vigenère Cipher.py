@@ -1,6 +1,6 @@
 A = "abcdefghijklmnopqrstuvwxyz"
 
-def vigenere_encrypt(p,key):
+def vigenère_encrypt(p,key):
     c = ""
     i = 0
     for l in p:
@@ -14,7 +14,7 @@ def vigenere_encrypt(p,key):
             c += l
     return c
 
-def vigenere_decrypt(c,key):
+def vigenère_decrypt(c,key):
     p = ""
     i = 0
     for l in c:
