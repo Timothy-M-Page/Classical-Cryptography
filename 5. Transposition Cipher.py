@@ -22,15 +22,3 @@ def transposition_decrypt(c,perm):
     return "".join(p)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
