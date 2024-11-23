@@ -11,23 +11,24 @@ def inv(a):                             # Inverse element in the group Z/26Z
 
 def affine_encrypt(a,b,p):
     c = ""
-    for i in p:
-        if i in A:
-            c += A[(b + (a*A.index(i))) % 26]
+    p = p.lower()
+    for l in p:
+        if l in A:                                  # For each alphabetic character l in the plaintext
+            c += A[(b + (a*A.index(l))) % 26]       # replace the letter by a*l + b mod 26.
         else:
-            c += i
+            c += l
     return c
 
 def affine_decrypt(a,b,c):
     p = ""
     x = inv(a)
     if x is None:
-        return "Decryption failed due to no inverse"
-    for i in c:
-        if i in A:
-            p += A[((A.index(i) - b) * x) % 26]
+        return "Decryption failed due to no inverse."
+    for l in c:
+        if l in A:                                  # For each alphabetic character l in the ciphertext
+            p += A[((A.index(l) - b) * x) % 26]     # replace the letter by (l-b)*inv(a) mod 26.
         else:
-            p += i
+            p += l
     return p
 
 
